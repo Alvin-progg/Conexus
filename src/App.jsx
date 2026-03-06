@@ -1239,29 +1239,104 @@ export default function App() {
           font-family: 'DM Sans', sans-serif; font-size: 13px; color: rgba(240,240,232,0.35);
         }
 
-        @media (max-width: 768px) {
-          .nav { height: 64px; padding: 0 20px; }
-          .logo { width: 64px; height: 64px; flex-basis: 64px; }
-          .logo-mark { width: 102px; height: 102px; }
-          .nav-links { display: none; }
-          .content-wrap { padding: 0 20px 72px; }
+        @media (max-width: 1024px) {
           .services-grid { grid-template-columns: repeat(2, 1fr); }
-          .projects-slider-shell { padding: 0 10px; }
-          .projects-swiper { padding: 4px 2px 8px; }
-          .project-image { height: 200px; }
-          .achievements-slider-shell { padding: 0 10px; }
-          .achievement-card { height: 300px; }
-          .achievement-overlay { padding: 20px; }
-          .achievement-title { font-size: 18px; }
-          .achievement-desc { font-size: 13px; }
-          .team-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-          .team-avatar { width: 100px; height: 100px; }
+          .projects-slider-shell,
+          .achievements-slider-shell { padding: 0 28px; }
           .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
           .contact-content { position: static; }
-          .contact-header .section-title { font-size: 32px; }
-          .contact-container { padding: 32px 24px; }
-          .form-row { grid-template-columns: 1fr; gap: 24px; }
-          footer { flex-direction: column; gap: 8px; text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+          .nav { height: 64px; padding: 0 16px; }
+          .logo { width: 58px; height: 58px; flex-basis: 58px; }
+          .logo-mark { width: 92px; height: 92px; }
+          .nav-links { display: none; }
+          .nav .btn-primary { padding: 8px 14px; font-size: 13px; }
+
+          .hero {
+            min-height: auto;
+            padding: 108px 16px 56px;
+          }
+          .hero-title {
+            font-size: clamp(34px, 10vw, 48px);
+            letter-spacing: -1px;
+            line-height: 1.08;
+            max-width: 100%;
+          }
+          .hero-sub {
+            font-size: 14px;
+            max-width: 100%;
+            line-height: 1.6;
+          }
+          .hero-cta {
+            width: 100%;
+            justify-content: center;
+          }
+          .hero-cta .btn-primary {
+            width: 100%;
+            max-width: 280px;
+            text-align: center;
+          }
+          .ticker-wrapper { margin-top: 40px !important; }
+          .ticker-item { padding: 0 20px; min-width: 84px; }
+          .ticker-item img { width: 28px; height: 28px; }
+
+          .content-wrap { padding: 0 16px 64px; }
+
+          .services-header,
+          .projects-header,
+          .achievements-header,
+          .team-header { margin-bottom: 36px; }
+
+          .services-grid { grid-template-columns: 1fr; gap: 14px; }
+          .service-card { padding: 24px 18px; }
+
+          .projects-slider-shell,
+          .achievements-slider-shell { padding: 0 4px; }
+          .projects-swiper,
+          .achievements-swiper { padding: 4px 2px 8px; }
+          .project-image { height: 190px; }
+          .project-content { padding: 16px; }
+          .project-name { font-size: 20px; }
+          .projects-nav-btn,
+          .achievements-nav-btn { display: none; }
+
+          .achievement-card { height: 270px; }
+          .achievement-overlay { padding: 16px; }
+          .achievement-title { font-size: 16px; }
+          .achievement-desc { font-size: 12px; }
+
+          .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+          .team-avatar { width: 88px; height: 88px; margin-bottom: 12px; }
+          .team-name { font-size: 15px; }
+          .team-role { font-size: 12px; }
+          .social-link { width: 32px; height: 32px; }
+
+          .contact-header .section-title { font-size: 30px; }
+          .contact-container { padding: 22px 16px; border-radius: 14px; }
+          .contact-form { gap: 16px; }
+          .form-row { grid-template-columns: 1fr; gap: 16px; }
+          .form-input,
+          .form-textarea { font-size: 14px; padding: 12px 14px; }
+
+          footer {
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+            padding: 24px 16px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .nav .btn-primary {
+            padding: 7px 12px;
+            font-size: 12px;
+          }
+          .hero-title { font-size: clamp(30px, 10.5vw, 40px); }
+          .hero-sub { font-size: 13px; }
+          .team-grid { grid-template-columns: 1fr; }
+          .contact-header .section-title { font-size: 26px; }
         }
 
         @media (prefers-reduced-motion: reduce) {
